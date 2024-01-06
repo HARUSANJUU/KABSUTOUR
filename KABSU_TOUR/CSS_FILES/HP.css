@@ -14,6 +14,7 @@ nav{
 background: #7F9280;
 height: 70px;
 width: 100%;
+
 }
 .logoIMG{
 padding-left: 20px;
@@ -54,10 +55,11 @@ button:active {
   background-color: var(--c);
   color: #fff;
 }
+
 .b1 {
   font-family: system-ui, sans-serif;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   padding: .1em .6em;
   font-weight: bold;  
@@ -66,11 +68,18 @@ button:active {
   right: 10px;
   margin-right: 190px;
   margin-top: 25px;
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
 }
 .b2 {
   font-family: system-ui, sans-serif;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   padding: .1em .6em;
   font-weight: bold;  
@@ -79,10 +88,61 @@ button:active {
   right: 10px;
   margin-right: 80px;
   margin-top: 25px;
+  max-height: 100vh;
 }
 .hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+.H_Homepage{
+  font-family: 'EB Garamond';font-size: 22px; 
+  width: 100%;
+  height: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+
+}
+.container {
+  margin-top: 20px;
+}
+
+.custom-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-container img {
   width: 100%;
   height: auto;
 }
 
-
+.custom-container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #F2EDDB;
+  color: black;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
