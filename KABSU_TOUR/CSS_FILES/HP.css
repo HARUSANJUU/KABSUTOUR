@@ -1,39 +1,163 @@
-.body {
+* {
+  margin: 0;
+  font-family: "futura md bt";
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  top: 30px;
+}
+.body{
   background-color: #F2EDDB;
-  font-family: montserrat;
+}
+header {
+  background: #7F9280;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+header > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ }
+.logo {
+  font-size: 30px;
+  color: #F2EDDB;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+}
+.cvsulogo{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+header nav ul {
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  margin-top: 20px;
+  
 
 }
-*{
-padding: 0;
-margin: 0;
-text-decoration: none;
-list-style: none;
-box-sizing: border-box;
-}
-nav{
-background: #7F9280;
-height: 70px;
-width: 100%;
+header nav ul li a {
+  display: inline-block;
+  align-items: center;
+  background-color: #485653;
+  border: 0 solid #485653;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 5px;
+  
 
+ }
+ header nav ul li a:hover,
+header nav ul li a.active {
+  background-color: #485653;
+  color: #fff;
 }
-.logoIMG{
-padding-left: 20px;
-padding-top: 15px;
-padding-bottom: 10px;
+ header nav ul li a:after {
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+ }
+ 
+.hamburger {
+  cursor: pointer;
+  display: none;
 }
-label.logo{
-color: white;
-font-size: 30px;
-line-height: 80px;
-padding: 0 100px;
-font-weight: bold;
-padding-left: 10px;
-position: absolute;
-cursor: pointer;
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #000;
 }
+@media only screen and (max-width: 900px) {
+  header {
+      padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .custom-container {
+    top: 110px;
+  }
+  .H_Homepage{
+    top: 140px;
 
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+  .hamburger {
+      display: block;
+  }
+  .hero-image{
+    display: none;
+  }
+  header nav {
+    background-color: #7F9280;
+      position: absolute;
+      width: 100%;
+      height: 15%;
+      right: -100%;
+      top: 60px;
+      padding: 15px;
+      transition: 0.4s;
+      font-size: -50px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+  }
+  header #nav_check:checked ~ nav {
+      right: 0;
+  }
+  header nav ul {
+      display: block;
+      margin-top: -1px; 
+  }
+  header nav ul li a {
+      margin: 5px 0;
+  }
+}
+@media (min-width: 768px) {
+  header nav ul li a {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+ }
 button {
-  --c:  #9EB99F; /* the color*/
+  --c:  #9EB99F;
   
   box-shadow: 0 0 0 .1em inset var(--c); 
   --_g: linear-gradient(var(--c) 0 0) no-repeat;
@@ -56,48 +180,19 @@ button:active {
   color: #fff;
 }
 
-.b1 {
-  font-family: system-ui, sans-serif;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  padding: .1em .6em;
-  font-weight: bold;  
-  border: none;
-  position: absolute;
-  right: 10px;
-  margin-right: 190px;
-  margin-top: 25px;
-  float: left;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-.b2 {
-  font-family: system-ui, sans-serif;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  padding: .1em .6em;
-  font-weight: bold;  
-  border: none;
-  position: absolute;
-  right: 10px;
-  margin-right: 80px;
-  margin-top: 25px;
-  max-height: 100vh;
-}
 .hero-image {
   text-align: center;
-}
+  position: relative;
+  top: -60px;
+  padding: 0%;
+  margin: 0%;
 
+}
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: auto; 
   max-height: 100vh;
+  margin-top: -10px;
 }
 .H_Homepage{
   font-family: 'EB Garamond';font-size: 22px; 
@@ -114,6 +209,8 @@ button:active {
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  position: relative;
+  margin-top: -90px;
 
 }
 .container {
@@ -129,6 +226,7 @@ button:active {
 .custom-container img {
   width: 100%;
   height: auto;
+  border-radius: 10%;
 }
 
 .custom-container button {
@@ -146,3 +244,6 @@ button:active {
   border-radius: 5px;
   text-align: center;
 }
+main {
+  margin-top: 70px;
+ }

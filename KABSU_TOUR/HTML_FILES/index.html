@@ -10,65 +10,83 @@
 
 </head>
 <body class="body">
-    <nav>
-        <a href="../HTML_FILES/index.html">
-        <img class="logoIMG" src="../MEDIA/logo.ico" alt="Logo" width="70" height="70">
-        <label class="logo">Immersive Campus Tour</label>
+  <header>
+    <a href="../HTML_FILES/index.html" style=" text-decoration: none;">
+      <img src="../MEDIA/logo.png" alt="logo" class="cvsulogo">
+      <div class="logo">Immersive Campus Tour</div>
     </a>
-        <button class="b1">HOME</button>
-        <button class="b2" style="--c:#9EB99F;">FAQs</button>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+        <ul>
+            <li>
+                <a href="" class="active">Home</a>
+            </li>
+            <li>
+                <a href="">FAQs</a>
+        </ul>
     </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </label>
+  </header>
+  <main>
     <div class="hero-image">
-        <img src="../MEDIA/Heroimg.jpg" alt="Hero Image" alt="bg"/>
-    </div>
+      <img src="../MEDIA/Heroimg.png" alt="Hero Image" alt="bg"/>
+  </div>
 
-    <div class="H_Homepage">
-        <h1>
-            CvSU Carmona Campus
-        </h1>
-    </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="custom-container">
-              <img src="../MEDIA/btn_img/buildings.png" alt="Building Image">
-              <button class="btn btn_buildings">BUILDINGS</button>
-            </div>
-          </div>
-      
-          <div class="col-md-6">
-            <div class="custom-container">
-              <img src="../MEDIA/btn_img/lounges.png" alt="Lounges Image">
-              <button class="btn btn_lounges">STUDENT LOUNGES</button>
-            </div>
+  <div class="H_Homepage">
+      <h1>
+          CvSU Carmona Campus
+      </h1>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="custom-container">
+            <img src="../MEDIA/btn_img/buildings.png" alt="Building Image">
+            <button class="btn btn_buildings">BUILDINGS</button>
           </div>
         </div>
-      
-        <div class="row">
-          <div class="col-md-6">
-            <div class="custom-container">
-              <img src="../MEDIA/btn_img/department.png" alt="Department Image">
-              <button class="btn btn_department">DEPARTMENT FACILITIES</button>
-            </div>
-          </div>
-      
-          <div class="col-md-6">
-            <div class="custom-container">
-              <img src="../MEDIA/btn_img/laboratory.png" alt="Lab Image">
-              <button class="btn btn_lab">LABORATORIES</button>
-            </div>
-          </div>
-        </div>
-
-          <div class="col-md-6">
-            <div class="custom-container">
-              <img src="../MEDIA/btn_img/courses.png" alt="Courses Image">
-              <button class="btn btn_courses">COURSES</button>
-            </div>
+    
+        <div class="col-md-6">
+          <div class="custom-container">
+            <img src="../MEDIA/btn_img/lounges.png" alt="Lounges Image">
+            <button class="btn btn_lounges">STUDENT LOUNGES</button>
           </div>
         </div>
       </div>
     
+      <div class="row">
+        <div class="col-md-6">
+          <div class="custom-container">
+            <img src="../MEDIA/btn_img/department.png" alt="Department Image">
+            <button class="btn btn_department">DEPARTMENT FACILITIES</button>
+          </div>
+        </div>
     
+        <div class="col-md-6">
+          <div class="custom-container">
+            <img src="../MEDIA/btn_img/laboratory.png" alt="Lab Image">
+            <button class="btn btn_lab">LABORATORIES</button>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-md-6">
+          <div class="custom-container">
+            <img src="../MEDIA/btn_img/courses.png" alt="Courses Image">
+            <button class="btn btn_courses">COURSES</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+
+  </main>
+  
 </body>
+
 </html>
