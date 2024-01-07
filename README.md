@@ -4,3 +4,5 @@ ETO NA DITO NA TAYO MAG CODE
 
 Magdownload ng Github Desktop tapos Github sa VsCode para upload nalang ng upload...
 -Vincent
+
+Download mo nalang yung code latest kasi dito tehee >_<
