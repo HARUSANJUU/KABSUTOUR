@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/faqs.css">
+    <title>FAQs</title>
+    <link rel="icon" type="image/x-icon" href="../MEDIA/logo.ico">
+
+</head>
+<!--START NG CODE NG TOPBAR-->
+<body class="body">
+  <header>
+    <a href="../HTML_FILES/index.html" style=" text-decoration: none;">
+      <img src="../MEDIA/logo.png" alt="logo" class="cvsulogo">
+      <div class="logo">Immersive Campus Tour</div>
+    </a>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+        <ul>
+            <li>
+                <a  href="../HTML_FILES/index.html"  class="active">Home</a>
+            </li>
+            <li>
+                <a href="">FAQs</a>
+        </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </label>
+  </header>
+<!--START NG CODE NG FAQs-->
+<div class="wrapper">
+    <p>Different concerns about Immersive Campus Tour</p>
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <button class="accordion">
+        | Admission and enrollment guidelines
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <div class="image-text">
+        <img src="../MEDIA/FAQs/uniform.png" class="img-responsive img-thumbnail" alt="Responsive image" style="max-width: 300px; width: auto;" />
+        <div class="text-content">
+            <ol type="1">
+              <li>1. Fill out the Admission Application Form: <a href="https://apps.cvsu.edu.ph/admission/" target="_blank">https://apps.cvsu.edu.ph/admission/</a> and Download the Admission Application Form</li>
+              <li>2. Select your schedule of submission of requirements through the same link</li>
+              <li>3. Download and print the completed form. Attach your 1 x 1 photo (with white background and name tag) and affix your signature,</li>
+              <li>4. Complete the requirements and place all documents in a long white folder</li>
+              <li>5. Submit your requirements on-site at Cavite State University - Carmona Campus, Admission Office Main Building, 2nd Floor, Room 206A, on the day of your selected schedule</li>
+              <li>6. After submitting your complete requirements, you will receive an examination permit with your schedule. (For Transferee applicants, you will be given a Notice of Evaluation and Schedule for the evaluation)</li>
+              <li>7. Take the Entrance Examination on your Scheduled Date On-site</li>
+              <li>8. Then, WAIT for the Release of the Examination Results on May 17, 2024</li>
+              <li>9. Lastly, Wait for the Issuance of NOTICE OF ADMISSION (NOA) for the Admission Passers for enrollment.</li>
+            
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    <div class="faq">
+      <button class="accordion">
+        | Life of the CvSU students
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+          ullam, iure eligendi harum eaque hic corporis debitis porro
+          consectetur voluptate rem officiis architecto.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        | Students Organizations
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+          ullam, iure eligendi harum eaque hic corporis debitis porro
+          consectetur voluptate rem officiis architecto.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        How does the Krushi address the above challanges?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+          ullam, iure eligendi harum eaque hic corporis debitis porro
+          consectetur voluptate rem officiis architecto.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        How can I be a part of Krushi?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+          ullam, iure eligendi harum eaque hic corporis debitis porro
+          consectetur voluptate rem officiis architecto.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        How does it work?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+          ullam, iure eligendi harum eaque hic corporis debitis porro
+          consectetur voluptate rem officiis architecto.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+  </script>
+  </div>
+
+
+
+<!--START NG CODE NG FOOTER-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+</body>
+</html>

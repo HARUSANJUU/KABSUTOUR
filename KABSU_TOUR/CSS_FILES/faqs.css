@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
     margin: 0;
     font-family: "futura md bt";
@@ -144,30 +145,14 @@
         margin: 5px 0;
     }
   }
+
+  
   @media (min-width: 768px) {
     header nav ul li a {
       font-size: 1rem;
       padding: 0.8rem 1.2rem;
     }
    }
-
-.B_Buildings{
-    margin-left: 40px;
-    margin-top: 50px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 26px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: capitalize;
-}
-
-
-
   button {
     --c:  #9EB99F;
     
@@ -191,106 +176,105 @@
     background-color: var(--c);
     color: #fff;
   }
-
   
 
-  /*STYLE NG BUILDING*/
-  .B_Buildings{
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 34px;
-    letter-spacing: -1px;
-    word-spacing: 3.2px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: uppercase;
+  /*STYLE NG FAQs*/
 
-  }
-  .member {
-    display: inline-block;
-    width: 350px;
-    height: 400px;
-    vertical-align: top;
-    margin: 0 20px;
-    margin-bottom: 200px;
+.wrapper {
+  max-width: 75%;
+  margin: auto;
 }
-.name {
-  display: inline;
-  margin-left: 40px;
-  margin-bottom: 30px;
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 1.5rem 0;
+  text-align: center;
 }
-.member img {
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
   width: 100%;
-  height: 300px;
-  display: block;
-  margin: 10px;
-  margin-bottom: 5px;
-  margin-top: 60px;
-  border-width: 10px;
-  border-style: outset;
-  border-color: #7F9280;
-  padding: 0%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.active,
+.accordion:hover {
+  background-color: #f1f7f5;
+}
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: #f1f7f5;
+  display: none;
+  align-items: center;
+}
+.pannel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+.faq.active {
+  border: none;
+}
+
+.image-text {
+  display: flex;
+  align-items: flex-start; 
 
 }
-@media (max-width: 600px) {
-  .member img {
-   width: 400px;
-   height: auto;
-   display: block;
-   margin-bottom: 20px;
-   margin-top: 10px;
 
-  }
- 
-  .member {
-   display: flex;
-   flex-direction: column; /* This stacks the children vertically */
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   height: auto;
-   margin: 0 5px;
+.img-responsive.img-thumbnail {
+  max-width: 50px;
+  height: auto; 
+  object-fit: cover; 
+}
 
-  }
- 
-  .name {
-   display: flex;
-   justify-content: right; /* This centers the text horizontally */
-   align-items: right; /* This centers the text vertically */
-   padding-top: -40px;
-   font-size: 15px;
-   margin-top: 60px; /* This creates space above the text */
-   margin-left: -100px;
-  }
+.text-content {
+  margin-left: 10px; 
+  font-size: 15px;
+}
 
-   .bmain{
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    padding-top: -40px;
-    font-size: 15px;
-    margin-left:  0px;
-    font-size: larger;
-    font-weight: bold;
-   }
-   .mpb{
-    margin: 30px;
-    padding-left: 80px;
-   }
-   .B_Buildings
-   {
-    padding-bottom: -10px;
-    padding-top: 80px;
-   }
-  }
-
-
-  main {
-    margin-top: 70px;
-   }
+.text-content ol {
+  padding-left: 20px;
   
+}
+@media (min-width: 600px) {
+  .img-responsive.img-thumbnail {
+    display: block; 
+    max-width: 50px; 
+  }
+  .image-text {
+    flex-wrap: nowrap; 
+  }
+
+
+}
+
+
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
   body{
       line-height: 1.5;
@@ -315,7 +299,8 @@
   .footer{
       background-color: #24262b;
       padding: 70px 0;
-      margin-top: 150px
+      margin-top: 150px;
+      width: 100%;
   
   }
   .footer-col{
