@@ -33,8 +33,20 @@
   </header>
   <main>
     <div class="hero-image">
-      <img src="../MEDIA/Heroimg.png" alt="Hero Image" alt="bg"/>
-  </div>
+      <img src="../MEDIA/Heroimg.png" alt="Hero Image" id="heroImage">
+    </div>
+
+    <script>
+function handleScroll() {
+  var heroImage = document.getElementById('heroImage');
+  var scrollValue = window.pageYOffset;
+  var blurValue = scrollValue * 0.05; 
+  heroImage.style.filter = `blur(${blurValue}px)`; 
+}
+window.addEventListener('scroll', handleScroll);
+
+    </script>
+
 
   <div class="H_Homepage">
       <h1>
