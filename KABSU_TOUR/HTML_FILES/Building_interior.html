@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/buildinginterior.css">
+    <title>Buildings</title>
+    <link rel="icon" type="image/x-icon" href="../MEDIA/logo.ico">
+
+</head>
+<!--START NG CODE NG TOPBAR-->
+<body class="body">
+  <header>
+    <a href="../HTML_FILES/index.html" style=" text-decoration: none;">
+      <img src="../MEDIA/logo.png" alt="logo" class="cvsulogo">
+      <div class="logo">Immersive Campus Tour</div>
+    </a>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+        <ul>
+            <li>
+                <a href="../HTML_FILES/index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="../HTML_FILES/FAQs.html">FAQs</a>
+        </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </label>
+  </header>
+<!--START NG CODE NG BUILDINGS-->
+  <div class="B_Buildings">
+    <h1>
+        | Main Building
+    </h1>
+              
+</div>
+    <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="../MEDIA/interior/Groundf.jpg" style="width:100%" height="600px">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="../MEDIA/interior/regristrar.jpg" style="width:100%" height="600px">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="../MEDIA/interior/Library.png" style="width:100%" height="600px">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="../MEDIA/interior/clinic.jpg" style="width:100%" height="600px">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="../MEDIA/interior/Hallway.jpg" style="width:100%" height="600px">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="../MEDIA/interior/coveredc.jpg" style="width:100%" height="600px">
+        </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/Groundf.jpg" style="width:100%" onclick="currentSlide(1)" alt="GROUND FLOOR">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/regristrar.jpg" style="width:100%" onclick="currentSlide(2)" alt="REGISTRAR OFFICE">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/Library.png" style="width:100%" onclick="currentSlide(3)" alt="LIBRARY">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/clinic.jpg" style="width:100%"  onclick="currentSlide(4)" alt="CLINIC">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/Hallway.jpg" style="width:100%" onclick="currentSlide(5)" alt="HALLWAY">
+          </div>    
+          <div class="column">
+            <img class="demo cursor" src="../MEDIA/interior/coveredc.jpg" style="width:100%" onclick="currentSlide(6)" alt="COVERED COURT">
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+
+
+<!--START NG CODE NG FOOTER-->
+<iframe src="../HTML_FILES/FOOTER.html" width="100%" height="500px" scrolling="no"></iframe>
+</body>
+</html>
