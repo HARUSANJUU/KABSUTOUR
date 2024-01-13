@@ -8,7 +8,12 @@
 }
 .body{
   background-color: #F2EDDB;
-}
+  overflow-x: hidden;
+  }
+.body.html{
+    width: 100%;
+    height: 100%;
+  }
 header {
   background: #7F9280;
   width: 100%;
