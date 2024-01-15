@@ -15,6 +15,7 @@
   .body.html{
     width: 100%;
     height: 100%;
+
   }
   header {
     background: #7F9280;
@@ -118,6 +119,7 @@
     .custom-container {
       top: 110px;
     }
+
 
   
     .logo {
@@ -232,6 +234,7 @@
   background-color: #f1f7f5;
   display: none;
   align-items: center;
+  
 }
 .pannel p {
   color: rgba(0, 0, 0, 0.7);
@@ -247,11 +250,6 @@
   border: none;
 }
 
-.image-text {
-  display: flex;
-  align-items: flex-start; 
-
-}
 
 .img-responsive.img-thumbnail {
   max-width: 50px;
@@ -266,17 +264,17 @@
 
 .text-content ol {
   padding-left: 20px;
-  
+  font-size: 16px;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .img-responsive.img-thumbnail {
     display: block; 
     max-width: 50px; 
-  }
-  .image-text {
-    flex-wrap: nowrap; 
-  }
 
+  }
+  .faq.active{
+    font-size: small;
+  }
 
 }
 
