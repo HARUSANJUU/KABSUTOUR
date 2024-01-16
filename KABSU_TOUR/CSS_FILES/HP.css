@@ -185,7 +185,7 @@ button:active {
   color: #fff;
 }
 
-.hero-image {
+.heroImage {
   text-align: center;
   position: relative;
   top: -60px;
@@ -193,7 +193,7 @@ button:active {
   margin: 0%;
 
 }
-.hero-image img {
+.heroImage video {
   width: 100%;
   height: auto; 
   max-height: 100vh;

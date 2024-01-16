@@ -32,20 +32,22 @@
   </label>
   </header>
   <main>
-    <div class="hero-image">
-      <img src="../MEDIA/Heroimg.png" alt="Hero Image" id="heroImage">
+    <div class="heroImage">
+      <video autoplay muted loop id="heroImage">
+        <source src="../MEDIA/heroimg3.mp4" type="video/mp4">
+     </video>
     </div>
-
     <script>
-function handleScroll() {
-  var heroImage = document.getElementById('heroImage');
-  var scrollValue = window.pageYOffset;
-  var blurValue = scrollValue * 0.05; 
-  heroImage.style.filter = `blur(${blurValue}px)`; 
-}
-window.addEventListener('scroll', handleScroll);
-
+      function handleScroll() {
+        console.log('Scroll event detected'); // New line
+        var heroImage = document.getElementById('heroImage');
+        var scrollValue = window.pageYOffset;
+        var blurValue = scrollValue * 0.05; 
+        heroImage.style.filter = `blur(${blurValue}px)`; 
+       }
+       window.addEventListener('scroll', handleScroll);
     </script>
+
 
 
   <div class="H_Homepage">
