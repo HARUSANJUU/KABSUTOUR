@@ -1,57 +1,57 @@
 * {
-  margin: 0;
-  font-family: "futura md bt";
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  top: 30px;
-}
-.body{
-  background-color: #F2EDDB;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    top: 30px;
   }
-.body.html{
+  .body{
+    background-color: #F2EDDB;
+    overflow-x: hidden;
+    }
+  .body.html{
+      width: 100%;
+      height: 100%;
+    }
+  header {
+    background: #7F9280;
     width: 100%;
-    height: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
   }
-header {
-  background: #7F9280;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-header > a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
- }
-.logo {
-  font-size: 30px;
-  color: #F2EDDB;
-  text-transform: uppercase;
-  text-decoration: none;
+  header > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   }
+  .logo {
+    font-size: 30px;
+    color: #F2EDDB;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+  }
+  .cvsulogo{
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    margin-right: 10px;
+    margin-left: -20px;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    margin-top: 20px;
+    
   
-}
-.cvsulogo{
-  width: 80px;
-  height: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -6px;
-  margin-right: 10px;
-  margin-left: -20px;
-}
-header nav ul {
-  display: flex;
-  justify-content: right;
-  align-items: flex-start;
-  margin-top: 20px;
-  
-
-}
+  }
   header nav ul li a {
     display: inline-block;
     align-items: center;
@@ -116,13 +116,19 @@ header nav ul {
     .custom-container {
       top: 110px;
     }
-
+    .H_Homepage{
+      top: 140px;
+  
+    }
   
     .logo {
       font-size: 16px;
     }
     .hamburger {
         display: block;
+    }
+    .hero-image{
+      display: none;
     }
     header nav {
       background-color: #7F9280;
@@ -154,25 +160,19 @@ header nav ul {
       font-size: 1rem;
       padding: 0.8rem 1.2rem;
     }
+    .footer {
+      display: flex;
+      justify-content: space-around;
+     }
+     
+     .footer .social-icon,
+     .footer .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+     }
    }
-
-.B_Buildings{
-    margin-left: 40px;
-    margin-top: 50px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 26px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: capitalize;
-}
-
-
-
+  
   button {
     --c:  #9EB99F;
     
@@ -196,27 +196,33 @@ header nav ul {
     background-color: var(--c);
     color: #fff;
   }
+
+
+  html, body, .stage, .ring, .img {
+    width:100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    user-select:none;
+  }
   
-
-  /*STYLE NG laboratory*/
-
-
-
-
-
-
-
-
-
-
-
-
+  html, body, .stage {
+    overflow:hidden;
+  }
+  
+  .container {
+    perspective: 2000px;
+    width: 300px;
+    height: 400px;  
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+  }
   main {
     margin-top: 70px;
    }
   
    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
+  
    .footer {
      position: relative;
      width: 100%;
@@ -333,3 +339,4 @@ header nav ul {
        background-positon-x: 0px;
      }
    }
+   

@@ -36,8 +36,8 @@ header > a {
   
 }
 .cvsulogo{
-  width: 46px;
-  height: 46px;
+  width: 80px;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
   margin-top: -6px;
@@ -160,7 +160,19 @@ header nav ul li a.active {
     font-size: 1rem;
     padding: 0.8rem 1.2rem;
   }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+   }
+   
+   .footer .social-icon,
+   .footer .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   }
  }
+
 button {
   --c:  #9EB99F;
   
