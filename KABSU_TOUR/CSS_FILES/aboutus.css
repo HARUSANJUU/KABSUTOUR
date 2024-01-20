@@ -196,27 +196,93 @@
     background-color: var(--c);
     color: #fff;
   }
+  .maps{
+    color: #333;
+    margin-bottom: 20px
+  }
+  iframe{
+    width: 80%;
+    height: 500px;
+  }
+  .fieldset {
+    border: 1px solid #000;
+}
+.A_About{
+  margin-left: 40px;
+  margin-top: 50px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+}
+.map-container {
+  text-align: center; /* Center the content */
+}
 
+.map-container iframe {
+  margin: auto; 
+  display: block; 
+  width: 80%;
+  max-width: 600px; 
+  height: 450px; 
+  border: 0; 
+}
 
-  html, body, .stage, .ring, .img {
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    user-select:none;
+.bordered-container {
+  margin-top: 500px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bordered-container legend {
+  position: absolute;
+  top: -1em;
+  left: 20px;
+  background: #F2EDDB;
+  padding: 0 5px;
+  color: inherit;
+  width: auto; /* Set width to auto for better responsiveness */
+}
+
+.bordered-container span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles for smaller devices */
+@media only screen and (max-width: 768px) {
+  .bordered-container {
+    margin-top: 20px; /* Reduce the top margin on smaller screens */
+    padding: 10px; /* Reduce padding on smaller screens */
+    max-width: 95%; /* Increase max-width for better use of space on smaller screens */
   }
+
+  .bordered-container legend {
+    top: -0.8em; 
+    left: 10px; 
+  }
+
+  .bordered-container span {
+    margin-bottom: 5px;
+  }
+  .A_About
+  {
+   padding-bottom: -10px;
+   padding-top: 80px;
+  }
+}
+
   
-  html, body, .stage {
-    overflow:hidden;
-  }
-  
-  .container {
-    perspective: 2000px;
-    width: 300px;
-    height: 400px;  
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-  }
   main {
     margin-top: 70px;
    }
