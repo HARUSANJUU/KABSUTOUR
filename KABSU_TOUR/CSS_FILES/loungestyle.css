@@ -79,7 +79,9 @@ header nav ul {
 
 /* Style the image inside the lightbox */
 .lightbox img {
-  max-width: 100%;
+  width: 1500px;
+  height: 800px;
+  max-width: 98vh;
   max-height: 80vh;
   display: block;
   margin: 0 auto;
@@ -336,34 +338,6 @@ background-color: #a1c1a3;
      padding-top: 80px;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   main {
     margin-top: 70px;
    }
