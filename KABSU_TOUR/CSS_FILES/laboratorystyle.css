@@ -154,9 +154,9 @@ header nav ul {
       font-size: 1rem;
       padding: 0.8rem 1.2rem;
     }
-   }
 
-.B_Buildings{
+   }
+   .Lab{
     margin-left: 40px;
     margin-top: 50px;
     font-family: Verdana, Geneva, sans-serif;
@@ -169,6 +169,14 @@ header nav ul {
     font-style: normal;
     font-variant: normal;
     text-transform: capitalize;
+}
+@media (max-width: 600px) {
+  .Lab
+  {
+   padding-bottom: -10px;
+   padding-top: 80px;
+  }
+  
 }
 
 
