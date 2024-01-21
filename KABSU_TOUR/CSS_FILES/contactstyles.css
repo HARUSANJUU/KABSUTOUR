@@ -198,6 +198,32 @@
     
   
     /*STYLE NG Contacts*/
+    .bordered-container span a{
+      font-size: 25px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .bordered-container span .ion-icon{
+      font-size: 50px;
+    }
+    .no-underline {
+      text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+    vertical-align: middle;
+
+}
+.bordered-container legend {
+  position: absolute;
+  top: -1em;
+  left: 20px;
+  background: #F2EDDB;
+  padding: 0 5px;
+  color: inherit;
+  width: auto; 
+  font-size: 30px;
+  font-weight: bold;
+}
     .C_Contact{
       font-family: "Arial Black", Gadget, sans-serif;
       font-size: 34px;

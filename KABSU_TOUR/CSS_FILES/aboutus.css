@@ -233,6 +233,10 @@
   height: 450px; 
   border: 0; 
 }
+p{
+  font-size: 25px;
+  text-align: justify;
+}
 
 .bordered-container {
   margin-top: 500px;
@@ -251,7 +255,10 @@
   background: #F2EDDB;
   padding: 0 5px;
   color: inherit;
-  width: auto; /* Set width to auto for better responsiveness */
+  width: auto; 
+  font-size: 30px;
+  font-weight: bold;
+
 }
 
 .bordered-container span {
@@ -270,6 +277,10 @@
   .bordered-container legend {
     top: -0.8em; 
     left: 10px; 
+    font-size: 20px;
+  }
+  p{
+    font-size: 20px;
   }
 
   .bordered-container span {
