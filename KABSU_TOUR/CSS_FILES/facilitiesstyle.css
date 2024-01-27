@@ -116,6 +116,11 @@ header nav ul {
     .custom-container {
       top: 110px;
     }
+    .Facilities
+    {
+     padding-bottom: -10px;
+     padding-top: 80px;
+    }
 
   
     .logo {
@@ -149,14 +154,7 @@ header nav ul {
         margin: 5px 0;
     }
   }
-  @media (min-width: 768px) {
-    header nav ul li a {
-      font-size: 1rem;
-      padding: 0.8rem 1.2rem;
-    }
-   }
-
-.B_Buildings{
+  .Facilities{
     margin-left: 40px;
     margin-top: 50px;
     font-family: Verdana, Geneva, sans-serif;
@@ -170,9 +168,16 @@ header nav ul {
     font-variant: normal;
     text-transform: capitalize;
 }
+  
+  @media (min-width: 768px) {
+    header nav ul li a {
+      font-size: 1rem;
+      padding: 0.8rem 1.2rem;
+    }
+    
 
 
-
+   }
   button {
     --c:  #9EB99F;
     
@@ -196,14 +201,154 @@ header nav ul {
     background-color: var(--c);
     color: #fff;
   }
-  
 
-  /*STYLE NG Department*/
+  /*STYLE NG FACILITIES*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.slider{
+  background-color: #000;
+  position: relative;
+  width: 1000px; /* Increased width */
+  min-height: 650px; /* Increased height */
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will push the navigation to the bottom */
+  position: relative;
+  margin: 20px auto; /* Center the slider horizontally */
 
+}
 
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
 
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin-top: -60px;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #485653;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility {
+  z-index: 999;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-self: center; /* Ensure it's centered in the flex container if needed */
+  margin-bottom: 50px; /* Adjust the distance from the bottom as needed */
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #485653;
+
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%;
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
 
 
 

@@ -175,19 +175,6 @@ header nav ul {
 }
 
   /*STYLE NG BUILDING*/
-  .B_Buildings{
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 34px;
-    letter-spacing: -1px;
-    word-spacing: 3.2px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: uppercase;
-
-  }
   .member {
     display: inline-block;
     width: 350px;
