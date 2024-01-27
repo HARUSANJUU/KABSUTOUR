@@ -188,6 +188,10 @@ header nav ul li a.active {
     font-size: 1rem;
     padding: 0.8rem 1.2rem;
   }
+  div.desc {
+    padding: 0; /* Adjust the padding as needed */
+ }
+  
  }
 
 .S_Lounges{
@@ -287,6 +291,37 @@ background-color: #a1c1a3;
       width: 49.99999%;
       margin: 6px 0;
     }
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+      max-height: 300px;
+      margin: 50px;
+      max-width: 450px; 
+    }
+    .lightbox {
+      position: fixed;
+      top: 50%;
+      left: 195px;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 10px;
+      border-radius: 3px;
+      display: none;
+      z-index: 1000;
+      max-width: 50vh; /* Adjust the maximum width */
+      max-height: 50vh; /* Adjust the maximum height */
+      overflow: auto; /* Allow scrolling within the lightbox */
+     }
+     
+     .lightbox img {
+      max-width: 42vh; 
+      max-height: 42vh; /* Make the image responsive */
+     }
+     
+     body.no-scroll {
+      overflow: hidden;
+     }
   }
   
   @media only screen and (max-width: 500px) {
