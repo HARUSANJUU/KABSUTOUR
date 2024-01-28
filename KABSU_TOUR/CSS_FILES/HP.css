@@ -245,15 +245,26 @@ button:active {
 
 .custom-container {
   position: relative;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: center; /* Center the content */
+  margin-bottom: 20px; /* Space below the container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  width: 100%; /* Adjust if you have a specific width in mind */
+  height: auto; /* Adjust based on the content or set a specific height */
 }
 
+.custom-container video {
+  width: 100%; /* Makes the video fill the container */
+  height: auto; /* Maintains the video's aspect ratio */
+  border-radius: 10%; /* Matches the border-radius from your selection */
+}
 .custom-container img {
   width: 100%;
   height: auto;
   border-radius: 10%;
 }
+
 
 .custom-container button {
   position: absolute;

@@ -207,191 +207,166 @@ header nav ul {
   
 
   /*STYLE NG laboratory*/
-  .member {
-    display: inline-block;
-    width: 350px;
-    height: 400px;
-    vertical-align: top;
-    margin: 0 20px;
-    margin-bottom: 200px;
-}
-.name {
-  display: inline;
-  margin-left: 40px;
-  margin-bottom: 30px;
-}
-.member img {
-  width: 100%;
-  height: 300px;
-  display: block;
-  margin: 10px;
-  margin-bottom: 5px;
-  margin-top: 60px;
-  border-width: 10px;
-  border-style: outset;
-  border-color: #7F9280;
-  padding: 0%;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-}
-@media (max-width: 600px) {
-  .member img {
-   width: 400px;
-   height: auto;
-   display: block;
-   margin-bottom: 20px;
-   margin-top: 10px;
-
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
- 
-  .member {
-   display: flex;
-   flex-direction: column; /* This stacks the children vertically */
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   height: auto;
-   margin: 0 5px;
-
-  }
- 
-  .name {
-   display: flex;
-   justify-content: right; /* This centers the text horizontally */
-   align-items: right; /* This centers the text vertically */
-   padding-top: -40px;
-   font-size: 15px;
-   margin-top: 60px; /* This creates space above the text */
-   margin-left: -100px;
-  }
-
-   .bmain{
+  
+  .slider{
+    background-color: #677468;
+    position: relative;
+    width: 1000px; /* Increased width */
+    min-height: 650px; /* Increased height */
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
     display: flex;
-    justify-content: right;
-    align-items: right;
-    padding-top: -40px;
-    font-size: 15px;
-    margin-left:  0px;
-    font-size: larger;
-    font-weight: bold;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the navigation to the bottom */
+    position: relative;
+    margin: 20px auto; /* Center the slider horizontally */
+  
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-top: -60px;
+  }
+  
+  .slider .slide .info{
+    position: absolute;
+    color: #222;
+    background: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  .navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #485653;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility {
+    z-index: 999;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-self: center; /* Ensure it's centered in the flex container if needed */
+    margin-bottom: 50px; /* Adjust the distance from the bottom as needed */
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #485653;
+  
+  }
+  
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+  
+    .slider .slide .info{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .slider .slide .info h2{
+      font-size: 1.8em;
+      line-height: 40px;
+    }
+  
+    .slider .slide .info p{
+      font-size: 0.9em;
+    }
+  }
+  
+  
+ 
+ @media only screen and (max-width: 768px) {
+   .responsive {
+     flex: 0 0 100%; /* Full width for smaller screens */
    }
-   .mpb{
-    margin: 30px;
-    padding-left: 80px;
-   }
-   .B_Buildings
+   .S_Lounges
    {
     padding-bottom: -10px;
     padding-top: 80px;
    }
-  }
+ }
 
-  img {
-    vertical-align: middle;
-    margin: 0%;
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
-    position: relative;
-  }
-  .container .row .column{
-    align-items: center;
-    width: 20%;
-
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev{
-    cursor: pointer;
-    position: absolute;
-    top: 30%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    margin: 3px;
-  }
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 30%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    margin: 14px;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #7F9280;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
 
 
 
