@@ -17,4 +17,3 @@ document.getElementById('mail-outline').addEventListener('click', function(event
   document.body.removeChild(textarea);
   alert('copied to clipboard succesfully.');
 });
-
