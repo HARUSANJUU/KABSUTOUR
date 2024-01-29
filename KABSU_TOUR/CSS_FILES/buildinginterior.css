@@ -8,157 +8,199 @@
 }
 .body{
   background-color: #F2EDDB;
-margin: 0%;
   overflow-x: hidden;
-width: 100%;
   }
-.body.html{
-    width: 100%;
-    height: 100%;
-  }
-header {
-  background: #7F9280;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+:root{
+    --white: #f9f9f9;
+    --black: #7F9280;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header > a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
- }
-.logo {
-  font-size: 30px;
-  color: #F2EDDB;
-  text-transform: uppercase;
-  text-decoration: none;
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.header{
+    display: flex;
+    align-items: center; /* Aligns items along the cross axis (vertically in this case) */
+    justify-content: space-between; /* Distributes items evenly in the container */
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+/* Logo */
+.logo{
+    margin-right: auto;
+    color: var(--white);
+    font-size: 30px;
+    margin-left: -5px;
+    letter-spacing: 2px;
+    
   
 }
 .cvsulogo{
-  width: 80px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
   overflow: hidden;
-  margin-top: -6px;
+  margin-top: -13px;
   margin-right: 10px;
-  margin-left: -20px;
-}
-header nav ul {
-  display: flex;
-  justify-content: right;
-  align-items: flex-start;
-  margin-top: 20px;
-  
+  margin-left: 30px;
 
 }
-  header nav ul li a {
-    display: inline-block;
-    align-items: center;
-    background-color: #485653;
-    border: 0 solid #485653;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1;
-    padding: 1rem 1.6rem;
-    text-align: center;
-    text-decoration: none #0d172a solid;
-    text-decoration-thickness: auto;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin: 5px;
-    
-  
-   }
-   header nav ul li a:hover,
-  header nav ul li a.active {
-    background-color: #485653;
-    color: #fff;
-  }
-   header nav ul li a:after {
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 48px;
-    left: 0;
+
+.nav{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
-   }
-   
-  .hamburger {
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+    font-size: large;
+    
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    margin-top: 30px;
+    
+    
+}
+.hamb{
     cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+    margin-top: -58px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+    
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+/* Responsiveness */
+@media only screen and (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+        margin-top: -10px;
+    }
+  
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+
+    .hamb{
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+  
+  .custom-container {
+    top: 110px;
+  }
+  .H_Homepage{
+    top: 140px;
+
+  }
+
+  .heroImage video {
     display: none;
   }
-  .hamburger div {
-    width: 30px;
-    height: 3px;
-    margin: 5px 0;
-    background: #000;
-  }
-  @media only screen and (max-width: 900px) {
-    header {
-        padding: 0 30px;
-    }
-  }
-  @media only screen and (max-width: 700px) {
-    .custom-container {
-      top: 110px;
-    }
+  .logo{
+    font-size: 17px;
+    letter-spacing: 1px;
 
-  
-    .logo {
-      font-size: 16px;
-    }
-    .hamburger {
-        display: block;
-    }
-    header nav {
-      background-color: #7F9280;
-        position: absolute;
-        width: 100%;
-        height: 20%;
-        right: -100%;
-        top: 60px;
-        padding: 15px;
-        transition: 0.4s;
-        font-size: -50px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        margin-top: 10px;
-        
-    }
-    header #nav_check:checked ~ nav {
-        right: 0;
-    }
-    header nav ul {
-        display: block;
-        margin-top: 1px;
-    }
-    header nav ul li a {
-        margin: 5px 0;
-    }
   }
-  @media (min-width: 768px) {
-    header nav ul li a {
-      font-size: 1rem;
-      padding: 0.8rem 1.2rem;
-    }
-   }
+  .cvsulogo{
+    width: 80px;
+    margin-left: 0%;
+  }
+  .nav {
+    flex-direction: column;
+    justify-content: top;
+    
+}
+
+
+}
 
 .B_Buildings{
     margin-left: 40px;
@@ -180,7 +222,6 @@ header nav ul {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
   .slider{
-    background-color: #677468;
     position: relative;
     width: 1000px; /* Increased width */
     min-height: 650px; /* Increased height */

@@ -5,32 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../KABSUTOUR/KABSU_TOUR/CSS_FILES/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../KABSUTOUR/KABSU_TOUR/CSS_FILES/HP.css">
-    <title>CvSU Carmona Tour</title>
+    <title>Homepage</title>
     <link rel="icon" type="image/x-icon" href="../KABSUTOUR/KABSU_TOUR/MEDIA/logo.ico">
 
 </head>
 <body class="body">
-  <header>
-    <a href="./index.html" style=" text-decoration: none;">
-      <img src="../KABSUTOUR/KABSU_TOUR/MEDIA/logo.png" alt="logo" class="cvsulogo">
-      <div class="logo">Immersive Campus Tour</div>
-    </a>
-    <input type="checkbox" id="nav_check" hidden>
-    <nav>
-        <ul>
-            <li>
-                <a href="./index.html" class="active">Home</a>
-            </li>
-            <li>
-                <a href="./FAQs.html">FAQs</a>
-        </ul>
-    </nav>
-    <label for="nav_check" class="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
-  </label>
-  </header>
+<!-- Navigation bar -->
+<header class="header">
+  <!-- Logo -->
+  <img src="../KABSUTOUR/KABSU_TOUR/MEDIA/logo.png" alt="logo" class="cvsulogo">
+  <a href="./index.html" class="logo">IMMERSIVE CAMPUS TOUR</a>
+  <!-- Hamburger icon -->
+  <input class="side-menu" type="checkbox" id="side-menu"/>
+  <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+  <!-- Menu -->
+  <nav class="nav">
+      <ul class="menu">
+          <li ><a href="./index.html" style="font-size: 20px; margin-top:-55px;">HOME</a></li>
+          <li><a href="./FAQs.html" style="font-size: 20px; margin-top:-55px;">FAQS</a> </li>
+      </ul>
+  </nav>
+</header>
   <main>
     <div class="heroImage">
       <video autoplay muted loop id="heroImage">
