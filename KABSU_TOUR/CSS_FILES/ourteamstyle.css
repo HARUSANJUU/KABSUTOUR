@@ -362,7 +362,12 @@ ul{
     color:  #f76c5e;
     text-transform: capitalize;
 }
-  
+  p{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 15px;
+  }
   .row{
     display: flex;
     margin-right: 50px;
