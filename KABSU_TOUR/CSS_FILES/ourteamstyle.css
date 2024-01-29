@@ -8,13 +8,12 @@
 }
 .body{
   background-color: #F2EDDB;
-margin: 0%;
   overflow-x: hidden;
   }
-.body.html{
-    width: 100%;
-    height: 100%;
-  }
+.html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 header {
   background: #7F9280;
   width: 100%;
@@ -94,8 +93,7 @@ header nav ul {
     position: absolute;
     top: -2px;
     transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
+
    }
    
   .hamburger {
@@ -129,7 +127,7 @@ header nav ul {
       background-color: #7F9280;
         position: absolute;
         width: 100%;
-        height: 15%;
+        height: 20%;
         right: -100%;
         top: 60px;
         padding: 15px;
@@ -138,13 +136,15 @@ header nav ul {
         justify-content: center;
         align-items: center;
         display: flex;
+        margin-top: 10px;
+        
     }
     header #nav_check:checked ~ nav {
         right: 0;
     }
     header nav ul {
         display: block;
-        margin-top: -1px; 
+        margin-top: 1px;
     }
     header nav ul li a {
         margin: 5px 0;
@@ -157,7 +157,8 @@ header nav ul {
     }
    }
 
-.B_Buildings{
+
+.T_Team{
     margin-left: 40px;
     margin-top: 50px;
     font-family: Verdana, Geneva, sans-serif;
@@ -220,8 +221,27 @@ header nav ul {
     margin-left: 80px;
 
 }
-.our-team{
-    text-align: center;
+.our-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This ensures that the content is centered */
+  width: 100%; /* Adjust this as needed */
+}
+
+.team_img, .team-content {
+  width: 100%; /* This makes both elements take the full width of their parent */
+}
+
+.team_img img {
+  width: 100%; /* Ensures the image takes the full width of its parent */
+  height: auto; /* Keeps the image aspect ratio */
+  object-fit: cover; /* Adjusts the image to cover the area, you can change this as needed */
 }
 .our-team .team_img{
     position: relative;
@@ -236,6 +256,36 @@ header nav ul {
     bottom: -100%;
     left: 0;
     transition: all 0.3s ease 0s;
+}
+.team_img {
+  position: relative;
+}
+
+.team_img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.team-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  justify-content: center; /* Centers the content vertically */
+  text-align: center; /* Ensures text within the content is centered */
+  width: 100%; /* Adjust this as needed */
+}
+
+.team_img:hover .overlay {
+  opacity: 1;
 }
 .our-team:hover .team_img:after{
     bottom: 0;
@@ -311,6 +361,7 @@ header nav ul {
     color:  #f76c5e;
     text-transform: capitalize;
 }
+  
   .row{
     display: flex;
     margin-right: 50px;
@@ -326,6 +377,7 @@ header nav ul {
     width: 7px;
     height: 7px;
     border-radius: 50%;
+    align-items: center;
     background: #27ae61;
     margin: 0 auto;
     position: relative;
@@ -358,16 +410,24 @@ header nav ul {
       font-variant: normal;
       text-transform: capitalize;
     }
-    @media only screen and (max-width: 700px) {
-      .demo .row > div {
-        flex: 0 0 100%;
-        max-width: 100%;
-        flex-direction: column;
-      }
-}
-    
 
+    /* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .demo .row > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
 }
+
+/* For screens larger than 768px */
+@media only screen and (min-width: 769px) {
+  .demo .row > div {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+}
+
   main {
     margin-top: 70px;
    }

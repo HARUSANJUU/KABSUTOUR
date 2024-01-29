@@ -133,7 +133,7 @@ header nav ul {
       background-color: #7F9280;
         position: absolute;
         width: 100%;
-        height: 15%;
+        height: 20%;
         right: -100%;
         top: 60px;
         padding: 15px;
@@ -142,18 +142,21 @@ header nav ul {
         justify-content: center;
         align-items: center;
         display: flex;
+        margin-top: 10px;
+        
     }
     header #nav_check:checked ~ nav {
         right: 0;
     }
     header nav ul {
         display: block;
-        margin-top: -1px; 
+        margin-top: 1px;
     }
     header nav ul li a {
         margin: 5px 0;
     }
   }
+  
   .Facilities{
     margin-left: 40px;
     margin-top: 50px;
@@ -212,7 +215,6 @@ header nav ul {
 }
 
 .slider{
-  background-color: #677468;
   position: relative;
   width: 1000px; /* Increased width */
   min-height: 650px; /* Increased height */
