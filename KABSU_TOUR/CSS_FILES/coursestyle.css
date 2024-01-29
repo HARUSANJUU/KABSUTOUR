@@ -14,7 +14,7 @@
 :root{
     --white: #f9f9f9;
     --black: #7F9280;
-    --gray: #85888C;
+    --gray: #8ebd89;
 } /* variables*/
 
 /* Reset */
@@ -51,11 +51,12 @@ ul{
     font-size: 30px;
     margin-left: -5px;
     letter-spacing: 2px;
-    
-  
+}
+.logo:active, .logo:hover {
+  color: #8ebd89;
 }
 .cvsulogo{
-  width: 115px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
   overflow: hidden;
@@ -285,14 +286,15 @@ ul{
    }
    
    .navigation{
-     height: 500px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     opacity: 0;
-     transition: opacity 0.5s ease;
-   }
-   
+    height: 500px;
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
    .slider:hover .navigation{
      opacity: 1;
    }
@@ -370,11 +372,25 @@ ul{
     .responsive {
       flex: 0 0 100%; /* Full width for smaller screens */
     }
-    .S_Lounges
+    .C_Courses
     {
      padding-bottom: -10px;
      padding-top: 80px;
     }
+    .slide{
+      position: relative;
+      margin-top: -190px;}
+   .navigation{
+    margin-top: -120px;
+   }
+   .parent-container {
+    position: relative;
+  }
+  
+  .navigation-visibility {
+  display: none;
+   
+  }
   }
 
 

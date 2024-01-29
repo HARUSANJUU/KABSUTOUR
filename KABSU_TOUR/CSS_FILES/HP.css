@@ -14,7 +14,7 @@
 :root{
     --white: #f9f9f9;
     --black: #7F9280;
-    --gray: #85888C;
+    --gray: #8ebd89;
 } /* variables*/
 
 /* Reset */
@@ -51,8 +51,9 @@ ul{
     font-size: 30px;
     margin-left: -5px;
     letter-spacing: 2px;
-    
-  
+}
+.logo:active, .logo:hover {
+  color: #8ebd89;
 }
 .cvsulogo{
   width: 100px;
