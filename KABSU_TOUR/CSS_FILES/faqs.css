@@ -82,6 +82,7 @@ button {
 button:hover {
   --_p: 100%;
   transition: background-position .4s, background-size 0s;
+
 }
 button:active {
   box-shadow: 0 0 9e9q inset #0009; 
